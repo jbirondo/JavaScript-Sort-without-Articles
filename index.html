@@ -46,8 +46,19 @@
   <ul id="bands"></ul>
 
 <script>
-const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean', 'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
+const bands = ['The Plot in You', 'The Devil Wears Prada',
+'Pierce the Veil', 'Norma Jean', 'The Bled', 'Say Anything',
+'The Midway State', 'We Came as Romans', 'Counterparts',
+'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
 
+function realFirstWord(str){
+  arr = str.split()
+  firstWord = arr[0]
+  if(arr[0] === "The" || arr[0] === "A"){
+    firstWord = arr[1]
+  }
+  return firstWord
+}
 
 </script>
 
