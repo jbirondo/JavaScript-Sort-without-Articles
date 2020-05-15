@@ -60,6 +60,12 @@ function realFirstWord(str){
   return firstWord
 }
 
+const sorted = bands.sort((a , b) => {
+  realFirstWord(a) < realFirstWord(b)
+})
+
+// console.log(sorted)
+
 </script>
 
 </body>
