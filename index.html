@@ -52,19 +52,22 @@ const bands = ['The Plot in You', 'The Devil Wears Prada',
 'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
 
 function realFirstWord(str){
-  arr = str.split()
+  arr = str.split(" ")
   firstWord = arr[0]
-  if(arr[0] === "The" || arr[0] === "A"){
+  if(arr[0] == "The" || arr[0] == "A" || arr[0] == "An"){
     firstWord = arr[1]
   }
   return firstWord
 }
-
-const sorted = bands.sort((a , b) => {
-  realFirstWord(a) < realFirstWord(b)
+const sorted = bands.sort(function (a , b){
+  if(realFirstWord(a) > realFirstWord(b)){
+    return 1
+  } else {
+    return -1
+  }
 })
 
-// console.log(sorted)
+console.table(sorted)
 
 </script>
 
