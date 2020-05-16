@@ -68,6 +68,11 @@ const sorted = bands.sort((a , b) => realFirstWord(a) > realFirstWord(b) ? 1 : -
 
 console.table(sorted)
 
+document.querySelector("#bands")
+  .innerHTML = sorted.map(band =>
+    `<li>${band}</li>`
+  ).join('')
+
 </script>
 
 </body>
