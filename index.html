@@ -59,13 +59,12 @@ function realFirstWord(str){
   }
   return firstWord
 }
-const sorted = bands.sort(function (a , b){
-  if(realFirstWord(a) > realFirstWord(b)){
-    return 1
-  } else {
-    return -1
-  }
-})
+
+function strip(bandName){
+  return bandName.replace(/^(a |the |an )/i, '').trim()
+}
+
+const sorted = bands.sort((a , b) => realFirstWord(a) > realFirstWord(b) ? 1 : -1)
 
 console.table(sorted)
 
